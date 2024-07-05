@@ -17,7 +17,7 @@ function Sethumd() {
         }
 
         try{
-            let result = axios.post("http://localhost:5000/setHumd",data);
+            let result = axios.post("http://192.168.9.126:5000/setHumd",data);
             console.log(result);
         }catch(err){
             console.error(err);

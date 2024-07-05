@@ -9,6 +9,10 @@ function Setlight() {
     const durationhour = useRef();
     const durationmin = useRef();
     const durationsec = useRef();
+
+    const odurationhour = useRef();
+    const odurationmin = useRef();
+    const odurationsec = useRef();
     const setTime = () => {
         let onhour = ontimehour.current.value;
         let onmin = ontimemin.current.value;
@@ -18,6 +22,10 @@ function Setlight() {
         let dmin = durationmin.current.value;
         let dsec = durationsec.current.value;
 
+
+        let odhour = odurationhour.current.value;
+        let odmin = odurationmin.current.value;
+        let odsec = odurationsec.current.value;
 
         let data = {
             onTime:{
@@ -29,11 +37,16 @@ function Setlight() {
                 hour:dhour,
                 min:dmin,
                 sec:dsec
+            },
+            offDuration:{
+                hour:odhour,
+                min:odmin,
+                sec:odsec
             }
         }
 
         try{
-            let response = axios.post("http://localhost:5000/setLight",data);
+            let response = axios.post("http://192.168.9.126:5000/setLight",data);
             console.log(response);
         }catch(err){
             console.error(err);
@@ -60,6 +73,17 @@ function Setlight() {
                         <input type="text" className='form-control' ref={durationhour} placeholder='Hours' />
                         <input type="text" className='form-control' ref={durationmin} placeholder='Minutes' />
                         <input type="text" className='form-control' ref={durationsec} placeholder='Seconds' />
+                    </div>
+
+                </div>
+                <div className="group">
+                    <label htmlFor="lower">
+                        Off Duration :
+                    </label> <br />
+                    <div className="row">
+                        <input type="text" className='form-control' ref={odurationhour} placeholder='Hours' />
+                        <input type="text" className='form-control' ref={odurationmin} placeholder='Minutes' />
+                        <input type="text" className='form-control' ref={odurationsec} placeholder='Seconds' />
                     </div>
 
                 </div>

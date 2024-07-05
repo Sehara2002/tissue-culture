@@ -11,7 +11,7 @@ function Navbar() {
         setDate(today);
     },[]);
     return (
-        <div className="container-fluide navbar-container">
+        <div className="container navbar-container">
             <div className="row">
                 <div className="col-sm-6">
                     <p className='Logo'>TMS | Admin Dashboard</p>

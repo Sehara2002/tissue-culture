@@ -1,0 +1,60 @@
+.login-component{
+    height:100vh;
+    width:100vw;
+    background:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url("../components/Images/tissueculturerack.jpeg");
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color:white;
+    font-family: 'Roboto';
+}
+
+.login-component-topic{
+    padding-top: 50px;
+}
+
+.login-form-container{
+    background: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4));
+    width:30vw;
+    height:80vh;
+    border-radius: 20px;
+    padding:50px;
+    margin: 5px auto 5px auto;
+}
+.login-form-grp{
+    padding:10px;
+}
+.login-input{
+    width:100%;
+    height:40px;
+    padding:10px;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid white;
+    color:white;
+}
+.login-input::placeholder{
+    color:white;
+}
+.login-input:focus{
+    border-color: white;
+}
+.login-btn{
+    width:100%;
+    height:40px;
+    border-radius: 50px;
+    background: transparent;
+    border:2px solid white;
+    color:white;
+    font-weight: 600;
+}
+.login-btn:hover{
+    color:black;
+    background-color: white;
+    transition: 0.2s ease-in-out;
+}
+.form-logo-container{
+    font-size: 10em;
+}

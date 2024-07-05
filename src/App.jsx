@@ -28,15 +28,15 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let tempData = await axios.post("http://localhost:5000/getFrontTemp");
+        let tempData = await axios.post("http://192.168.9.126:5000/getFrontTemp");
         console.log(tempData.data);
         setCurrentTemp(tempData.data.temp);
 
-        let humdData = await axios.post("http://localhost:5000/getFrontHumd");
+        let humdData = await axios.post("http://192.168.9.126:5000/getFrontHumd");
         console.log(humdData.data);
         setCurrentHumd(humdData.data.humd);
 
-        let lightData = await axios.post("http://localhost:5000/getFrontLight");
+        let lightData = await axios.post("http://192.168.9.126:5000/getFrontLight");
         console.log(lightData.data);
         setCurrentLight(lightData.data.status);
         setOnHour(lightData.data.onTime.hour);
@@ -85,7 +85,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="container-fluide nav-bar-cont">
+      <div className="container-fluid nav-bar-cont">
         <div className="row">
           <Navbar />
         </div>
