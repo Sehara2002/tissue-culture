@@ -46,7 +46,7 @@ function Setlight() {
         }
 
         try{
-            let response = axios.post("http://192.168.9.126:5000/setLight",data);
+            let response = axios.post("https://tsbackend-2bxj.onrender.com/setLight",data);
             console.log(response);
         }catch(err){
             console.error(err);

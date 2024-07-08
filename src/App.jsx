@@ -28,15 +28,15 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let tempData = await axios.post("http://192.168.9.126:5000/getFrontTemp");
+        let tempData = await axios.post("https://tsbackend-2bxj.onrender.com/getFrontTemp");
         console.log(tempData.data);
         setCurrentTemp(tempData.data.temp);
 
-        let humdData = await axios.post("http://192.168.9.126:5000/getFrontHumd");
+        let humdData = await axios.post("https://tsbackend-2bxj.onrender.com/getFrontHumd");
         console.log(humdData.data);
         setCurrentHumd(humdData.data.humd);
 
-        let lightData = await axios.post("http://192.168.9.126:5000/getFrontLight");
+        let lightData = await axios.post("https://tsbackend-2bxj.onrender.com/getFrontLight");
         console.log(lightData.data);
         setCurrentLight(lightData.data.status);
         setOnHour(lightData.data.onTime.hour);

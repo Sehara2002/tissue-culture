@@ -13,7 +13,7 @@ function Login() {
 
         const data = {username:e_un};
         try{
-            const db_result = axios.post("http://localhost:5000/getuser",data);
+            const db_result = axios.post("https://tsbackend-2bxj.onrender.com/getuser",data);
             db_result.then(response=>{
                 if(response.data["Status"]===true){
                     const db_pw = response.data["Password"];
