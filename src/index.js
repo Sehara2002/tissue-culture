@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Loginpage from './pages/Auth/Loginpage';
+import Tempchart from './components/Tempchart';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
     path:"/dashboard",
     element:<App/>,
     errorElement:"Not Found",
+  },
+  {
+    path:"/chart",
+    element:<Tempchart/>
   }
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));

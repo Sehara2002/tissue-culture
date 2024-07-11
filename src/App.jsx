@@ -9,6 +9,7 @@ import "./CSS/style.css";
 import Settemp from './components/Settemp';
 import Sethumd from './components/Sethumd';
 import Setlight from './components/Setlight';
+import Tempchart from './components/Tempchart';
 function App() {
   const [state, setState] = useState(false);
   const [tmpBtnTxt, setTmpBtnText] = useState('Manage');
@@ -147,6 +148,13 @@ function App() {
               }
             </div>
           </div>
+        </div>
+      </div>
+
+
+      <div className="container">
+        <div className="row">
+          <Tempchart/>
         </div>
       </div>
     </div>
