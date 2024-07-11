@@ -11,7 +11,7 @@ import {
     Legend,
   } from 'chart.js';
 import axios from 'axios';
-  
+    
   ChartJS.register(
     CategoryScale,
     LinearScale,
