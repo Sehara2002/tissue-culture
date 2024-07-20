@@ -152,13 +152,13 @@ function App() {
       </div>
       <div className="container">
         <div className="row">
-          
+{/*           
             <div class="card ">
               <Tempchart/>
             </div>
             <div class="card">
               <Tempchart/>
-            </div>
+            </div> */}
         </div>
       </div>
     </div>
