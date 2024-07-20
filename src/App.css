@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+.light-state-info{
+  text-transform: uppercase;
+  font-weight: bold;
+}
 .App{
   width:100vw;
   height:100vh;

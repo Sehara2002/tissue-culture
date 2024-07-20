@@ -97,7 +97,7 @@ function App() {
             <div className="card-body">
               <h4 className="card-title">Light Status</h4>
               <p className="onstatus">
-                Lights {currentLight}
+                Lights <p className="light-state-info">{currentLight}</p>
               </p>
               <p className="onDuration">
                 For {onhour}:{onmin}:{onsec} Time
@@ -150,11 +150,15 @@ function App() {
           </div>
         </div>
       </div>
-
-
       <div className="container">
         <div className="row">
-          <Tempchart/>
+          
+            <div class="card ">
+              <Tempchart/>
+            </div>
+            <div class="card">
+              <Tempchart/>
+            </div>
         </div>
       </div>
     </div>

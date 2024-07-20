@@ -14,7 +14,9 @@
 .nav-bar-cont {
     margin-bottom: 20px;
 }
-
+.light-state-info{
+    text-transform: uppercase;
+}
 .card-btn {
     transition: 0.25s;
     color: rgb(0, 0, 0);

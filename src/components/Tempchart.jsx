@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Line } from 'react-chartjs-2'
 import {
     Chart as ChartJS,
@@ -9,10 +9,11 @@ import {
     Title,
     Tooltip,
     Legend,
-  } from 'chart.js';
+} from 'chart.js';
 import axios from 'axios';
-    
-  ChartJS.register(
+import { FcElectricalThreshold } from 'react-icons/fc';
+
+ChartJS.register(
     CategoryScale,
     LinearScale,
     PointElement,
@@ -20,14 +21,14 @@ import axios from 'axios';
     Title,
     Tooltip,
     Legend
-  );
+);
 
 function Tempchart() {
 
-    useEffect(()=>{
-        axios.get("https://tsbackend-2bxj.onrender.com/getDbTemps")
-    },[]);
-
+    const [temps, setTemps] = useState();
+    
+    
+    
     const data = [
         { timeStamp: '08:00:00', temp: 22 },
         { timeStamp: '08:05:00', temp: 23 },
@@ -45,11 +46,11 @@ function Tempchart() {
     ];
 
     const chartData = {
-        labels: data.map(d => d.timeStamp),
+        labels: temps.map(d => d.timeStamp),
         datasets: [
             {
                 label: "Tempurature",
-                data: data.map(d => d.temp),
+                data: temps.map(d => d.temp),
                 fill: false,
                 backgroundColor: 'rgba(75,192,192,0.6)',
                 borderColor: 'rgba(75,192,192,1)',

@@ -20,11 +20,12 @@ function Settemp() {
       let res = axios.post("https://tsbackend-2bxj.onrender.com/setTemp", data);
       console.log(res);
       alert("Temperature Limit Updated");
+      navigator("/dashboard/")
     } catch (error) {
       console.error(error);
     }
 
-    navigator("/dashboard");
+    navigator("/dashboard/");
     
 
 
